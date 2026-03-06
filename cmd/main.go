@@ -18,7 +18,7 @@ func main() {
 
 	ctx := kong.Parse(&cli,
 		kong.Name("compose-vault"),
-		kong.Description("#TODO:"),
+		kong.Description("Render Docker Compose files with secrets fetched from HashiCorp Vault."),
 		kong.UsageOnError(),
 		kong.ConfigureHelp(kong.HelpOptions{Compact: true}),
 		kong.Exit(func(code int) { os.Exit(code) }),

@@ -24,6 +24,6 @@ func (v VersionFlag) BeforeApply(app *kong.Kong, vars kong.Vars) error {
 type CLI struct {
 	Globals
 
-	Render RenderCmd `cmd:""`
-	Check  CheckCmd  `cmd:""`
+	Render RenderCmd `cmd:"" help:"Render a Compose file by replacing Vault placeholders with secret values."`
+	Check  CheckCmd  `cmd:"" help:"Check YAML and Vault placeholder syntax without contacting Vault."`
 }
